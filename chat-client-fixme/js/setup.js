@@ -13,6 +13,7 @@ var getData = function() {
   $.ajax(SERVER_URL + '?order=-createdAt', {
     contentType: 'application/json',
     success: function(data) {
+
       processData(data); // eslint-disable-line no-use-before-define
     },
     error: function(data) {
@@ -103,7 +104,7 @@ var displayData = function(data, user) {
     getData();
   });
 };
-
+// the function to send data to server (postData function)
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
