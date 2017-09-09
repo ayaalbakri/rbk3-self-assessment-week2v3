@@ -8,8 +8,8 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table. knowing that the key never get very large
 
 /*
- Complexity: linear n(1) because have loop inside it
- */
+ Complexity: constant O(1) because we execute constant number of operation (constant time approach)
+ t*/
 
 var retrieve = function(key) {
   var hash = 0;
@@ -20,12 +20,10 @@ var retrieve = function(key) {
 };
 
 
-// Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
-
+// Problem 2: 
 /*
- Complexity O(n^1) linear because the function has slice function whitch iterate the element in array 
- to find specific element to delete it .
- */
+ Complexity O(log n) --- execution time increase but at decreasing rate 
+ the size of array decrease by time*/
 
 
 var sortedArrayContainsItem = function(array, item) {
@@ -41,7 +39,9 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:  O(n^2)quardratic because it has loop inside the loop function slice
+ Complexity:  O(n^2)quardratic execution time increase at an increasing rate
+ iterate  inside array with unkown size and inside the 
+ iterate function which need to iterate inside array whith unkown size
  */
 
 var hasDuplicates = function(array) {
